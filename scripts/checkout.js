@@ -52,7 +52,7 @@ export function renderCheckout() {
             <div class="product-price">
               $${MoneyConverter(matchingProduct.priceCents)}
             </div>
-            <div class="product-quantity">
+            <div class="product-quantity js-product-Quantity${matchingProduct.id}">
               <span>
                 Quantity: <span class="quantity-label">${productQuantity}</span>
               </span>
