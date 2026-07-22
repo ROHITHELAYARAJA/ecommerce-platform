@@ -60,7 +60,7 @@ export function renderCheckout() {
                 Update
               </span>
               <span class="delete-quantity-link link-primary js-delete-button"
-                data-product-id="${matchingProduct.id}">
+                data-product-id="${matchingProduct.id}  js-delete-product-id"${matchingProduct.id}">
                 Delete
               </span>
             </div>
