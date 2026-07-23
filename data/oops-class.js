@@ -7,14 +7,14 @@ class Cart{
   area ;
 
   constructor(area){
-    this.area = area;
+    this.#area = area;
     this.loadFromStorage();
     console.log(this);
 
 
   }
   loadFromStorage(){
-   this.cartItem = JSON.parse(localStorage.getItem(this.area)) || [
+   this.cartItem = JSON.parse(localStorage.getItem(this.#area)) || [
     {
     productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
     productQuantity: 1,
@@ -29,7 +29,7 @@ class Cart{
 
 }
   saveStorage(){
-  localStorage.setItem(this.area,JSON.stringify(this.cartItem));
+  localStorage.setItem(this.#area,JSON.stringify(this.cartItem));
   }
 
   addToCart(pId) {
