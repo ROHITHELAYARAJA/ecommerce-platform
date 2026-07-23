@@ -8,12 +8,12 @@ class Cart{
 
   constructor(area){
     this.#area = area;
-    this.loadFromStorage();
+    this.#loadFromStorage();
     console.log(this);
 
 
   }
-  loadFromStorage(){
+  #loadFromStorage(){
    this.cartItem = JSON.parse(localStorage.getItem(this.#area)) || [
     {
     productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
