@@ -35,7 +35,6 @@ export function getProduct(ProductId){
 }
 class Clothing extends Product{
   constructor(productDetails){
-    sizeChartLink;
     super(productDetails);
     this.sizeChartLink = productDetails.sizeChartLink;
   }
@@ -66,6 +65,29 @@ const tshirt = new Clothing({
 console.log(tshirt.sizeChartLink);
 console.log(tshirt);
 
+
+function sampleThis(){
+  console.log(this);
+  console.log("bye");
+  console.log(this)
+
+}
+
+sampleThis();
+sampleThis.call("Vanakkam");
+
+const obj = {
+  method:()=>{
+    console.log(this);
+  },
+  init() {
+    [2,3,4].forEach(()=>{
+      console.log(this);
+    });
+  }
+}
+obj.init();
+obj.method();
 
 //const product1 = new Product(
 //   {
