@@ -4,7 +4,7 @@ class Dummy{
 
 class Cart{
   cartItem;
-  area ;
+  #area ;
 
   constructor(area){
     this.#area = area;
